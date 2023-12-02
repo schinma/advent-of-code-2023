@@ -1,6 +1,4 @@
 
-from unittest import result
-
 
 cubes = {"red": 12, "blue": 14, "green": 13}
 
