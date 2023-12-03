@@ -1,9 +1,8 @@
-
 import math
 
 
 with open("2/input.txt", "r") as file:
-    results = 0  
+    results = 0
     for line in file.readlines():
         cubes = {"red": 0, "blue": 0, "green": 0}
         sets = line.split(":")[1].split(";")
@@ -18,5 +17,3 @@ with open("2/input.txt", "r") as file:
 
 
 print(results)
-        
-                    

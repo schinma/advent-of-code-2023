@@ -15,14 +15,14 @@ for i, line in enumerate(schematic):
         count = False
         number_span = number.span()
         if i - 1 >= 0:
-            for elem in schematic[i-1][number_span[0]-1:number_span[1]+1]:
+            for elem in schematic[i - 1][number_span[0] - 1 : number_span[1] + 1]:
                 if elem != ".":
                     count = True
                     break
-        if line[number_span[0]-1] != "." or line[number_span[1]] != ".":
+        if line[number_span[0] - 1] != "." or line[number_span[1]] != ".":
             count = True
         if i + 1 < len(schematic):
-            for elem in schematic[i+1][number_span[0]-1:number_span[1]+1]:
+            for elem in schematic[i + 1][number_span[0] - 1 : number_span[1] + 1]:
                 if elem != ".":
                     count = True
                     break
