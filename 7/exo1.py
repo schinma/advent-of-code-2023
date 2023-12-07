@@ -2,12 +2,13 @@ import re
 from typing import List
 from unittest import result
 
-card_order =  ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"]
-hand_types =  ["five", "four", "full", "three", "twopairs", "onepair", "highcard"]
+card_order = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"]
+hand_types = ["five", "four", "full", "three", "twopairs", "onepair", "highcard"]
 
 hands = []
 
 result = 0
+
 
 class Hand:
     def __init__(self, cards: List[str], bet: int) -> None:
@@ -19,7 +20,7 @@ class Hand:
         hand_cards = {}
         for card in hand:
             hand_cards[card] = hand_cards.get(card, 0) + 1
-        
+
         match len(hand_cards):
             case 5:
                 return "highcard"
@@ -44,13 +45,10 @@ class Hand:
                 return card_order.index(self.cards[i]) < card_order.index(other.cards[i])
         else:
             return hand_types.index(self.type) < hand_types.index(other.type)
-    
+
     def __eq__(self, other):
         return self.cards == other.cards
-    
-    def __repr__(self) -> str:
-        return f"Hand({self.cards} {self.type} {self.bet})"
-        
+
 
 with open("7/input.txt", "r") as file:
     for line in file:
