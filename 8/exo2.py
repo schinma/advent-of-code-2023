@@ -1,4 +1,4 @@
-# Day 8 Part I of advent od code calendar
+# Day 8 Part II of advent od code calendar
 
 import re
 import math
