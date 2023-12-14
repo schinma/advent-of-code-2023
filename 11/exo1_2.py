@@ -1,4 +1,4 @@
-# Day 11 Part I  and II of advent of code calendar
+# Day 11 Part I and II of advent of code calendar
 import itertools
 
 EXPANTION_RATE = 1000000
@@ -21,12 +21,6 @@ def get_column(j):
     for line in data:
         column.append(line[j])
     return column
-
-
-def print_map():
-    for line in data:
-        print(*list(line))
-    print()
 
 
 def calculate_distance(pair):
@@ -59,7 +53,6 @@ for col in range(len(data[0])):
 for i, line in enumerate(data):
     for j, elem in enumerate(line):
         if elem == "#":
-            data[i][j] = galaxy_count
             galaxies[galaxy_count] = (find_coord_expansion(i, line_to_expand), find_coord_expansion(j, col_to_expand))
             galaxy_count += 1
 
